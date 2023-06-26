@@ -29,6 +29,9 @@
         <derby.version>10.14.2.0</derby.version>
         <hsqldb.version>2.7.2</hsqldb.version>
 
+        <!-- Checker Framework version -->
+        <checker-framework.version>3.35.0</checker-framework.version>
+
         <!-- JDBC drivers for jOOQ-xyz-extensions modules and vendor-specific API access -->
         <postgres.version>42.5.4</postgres.version>
         <sqlserver.version>12.2.0.jre11</sqlserver.version>
@@ -129,11 +132,6 @@
             <dependency>
                 <groupId>org.jooq</groupId>
                 <artifactId>jooq-codegen-maven</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jooq</groupId>
-                <artifactId>jooq-migrations-maven</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -560,7 +558,7 @@
             <dependency>
                 <groupId>org.checkerframework</groupId>
                 <artifactId>checker</artifactId>
-                <version>2.5.6</version>
+                <version>${checker-framework.version}</version>
             </dependency>
 
             <dependency>
@@ -649,7 +647,7 @@
                         <!-- [#2413] Make compiler warnings a bit more visible
                              But don't fail (yet) -->
                         <compilerArgs>
-                            <arg>-Xlint:varargs</arg>
+                        <!-- <arg>-Xlint:varargs</arg> -->
                         </compilerArgs>
                     </configuration>
                 </plugin>
@@ -887,7 +885,10 @@
 
 
 
+
         <module>jOOQ-checker</module>
+
+
         <module>jOOQ-jackson-extensions</module>
         <module>jOOQ-postgres-extensions</module>
 
@@ -897,8 +898,9 @@
         <module>jOOQ-meta-extensions-liquibase</module>
         <module>jOOQ-codegen</module>
         <module>jOOQ-codegen-maven</module>
-        <module>jOOQ-migrations-maven</module>
+
         <module>jOOQ-migrations</module>
+
 
         <module>jOOQ-kotlin</module>
         <module>jOOQ-kotlin-coroutines</module>
@@ -908,7 +910,6 @@
 
 
         <module>jOOQ-xtend</module>
-
 
 
 
