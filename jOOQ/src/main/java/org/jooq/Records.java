@@ -561,7 +561,7 @@ public final class Records {
             keyMapper,
             LinkedHashMap::new,
             Collector.<R, Result<V>[], Result<V>>of(
-                () -> (Result<V>[]) new Result[1],
+                () -> new Result[1],
                 (x, r) -> {
                     V v = valueMapper.apply(r);
 
