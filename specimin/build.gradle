@@ -1,0 +1,26 @@
+plugins {
+    id 'java-library'
+    id 'org.checkerframework' version '0.6.37'
+}
+
+apply plugin: 'org.checkerframework'
+
+
+dependencies {
+compileOnly files("../../input/jOOQ/specimin/checker-qual.jar")
+testCompileOnly files("../../input/jOOQ/specimin/checker-qual.jar")
+checkerFramework files("../../input/jOOQ/specimin/checker.jar")
+}
+
+
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+}
+
+checkerFramework {
+    checkers = [
+            'org.checkerframework.checker.signedness.SignednessChecker'
+    ]
+    excludeTests = true
+}
