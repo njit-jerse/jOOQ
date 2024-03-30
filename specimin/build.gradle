@@ -8,7 +8,6 @@ apply plugin: 'org.checkerframework'
 
 dependencies {
 compileOnly files("../../input/jOOQ/specimin/checker-qual.jar")
-testCompileOnly files("../../input/jOOQ/specimin/checker-qual.jar")
 checkerFramework files("../../input/jOOQ/specimin/checker.jar")
 }
 
