@@ -1,4 +1,4 @@
-[WARNING] ; The Checker Framework crashed. Please report the crash.
+ ; The Checker Framework crashed. Please report the crash.
 Compilation unit: /home/markro/myjooq/jOOQ/src/main/java/org/jooq/ResultQuery.java
 Last visited tree at line 145 column 1:
 public interface ResultQuery extends Fields, Query, Iterable, Publisher {
