@@ -1,6 +1,6 @@
 plugins {
     id 'java-library'
-    id 'org.checkerframework' version '0.6.37'
+    id 'org.checkerframework' version '0.6.38'
 }
 
 apply plugin: 'org.checkerframework'
